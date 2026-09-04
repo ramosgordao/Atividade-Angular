@@ -1,0 +1,32 @@
+<div class="card">
+  <h2>Apólice de Seguro</h2>
+
+  <label>Nome do segurado:</label>
+  <input type="text" [(ngModel)]="nome">
+
+  <label>Sexo:</label>
+  <select [(ngModel)]="sexo">
+    <option value="">Selecione</option>
+    <option value="masculino">Masculino</option>
+    <option value="feminino">Feminino</option>
+  </select>
+
+  <label>Idade:</label>
+  <input type="number" [(ngModel)]="idade">
+
+  <label>Valor do automóvel:</label>
+  <input type="number" [(ngModel)]="valorAutomovel">
+
+  <button (click)="calcularApolice()">Calcular Apólice</button>
+
+  @if (valorApolice !== null) {
+    <div class="resultado">
+      <p><strong>Segurado:</strong> {{ nome }}</p>
+
+      <p>
+        <strong>Valor da Apólice:</strong>
+        R$ {{ valorApolice | number:'1.2-2' }}
+      </p>
+    </div>
+  }
+</div>

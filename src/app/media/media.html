@@ -1,0 +1,24 @@
+<div class="card">
+  <h2>Calcular Média</h2>
+
+  <label>AC1:</label>
+  <input type="number" [(ngModel)]="ac1">
+
+  <label>AC2:</label>
+  <input type="number" [(ngModel)]="ac2">
+
+  <label>AG:</label>
+  <input type="number" [(ngModel)]="ag">
+
+  <label>AF:</label>
+  <input type="number" [(ngModel)]="af">
+
+  <button (click)="calcular()">Calcular</button>
+
+  @if (media !== null) {
+    <div class="resultado">
+      <p><strong>Média Final:</strong> {{ media | number:'1.2-2' }}</p>
+      <p><strong>Situação:</strong> {{ situacao }}</p>
+    </div>
+  }
+</div>
