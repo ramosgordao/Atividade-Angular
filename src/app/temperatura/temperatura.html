@@ -1,0 +1,37 @@
+<div class="card">
+  <h2>Conversor de Temperatura</h2>
+
+  <label>Temperatura em Celsius:</label>
+
+  <input
+    type="number"
+    [(ngModel)]="celsius"
+  >
+
+  <button (click)="converter()">
+    Converter
+  </button>
+
+  @if (fahrenheit !== null && kelvin !== null) {
+
+    <div class="resultado">
+
+      <label>Fahrenheit:</label>
+
+      <input
+        type="text"
+        [value]="fahrenheit | number:'1.2-2'"
+        readonly
+      >
+
+      <label>Kelvin:</label>
+
+      <input
+        type="text"
+        [value]="kelvin | number:'1.2-2'"
+        readonly
+      >
+
+    </div>
+  }
+</div>
